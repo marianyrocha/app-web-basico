@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+section{
+    padding: 20px;
+    border-radius: 14px;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(172, 172, 172);
+}
+
+.titulo{
+    color: rgb(57, 57, 57);
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bt{
+    display: flex;
+    gap: 10px;
+}
+
+button{
+    flex: 1;
+    padding: 4px 10px;
+}
+
+.projetos{
+    display: flex;
+    gap: 10px;
+}
+
+.proj{
+    flex: 1;
+    background-color: lightgray;
+    border-radius: 0 8px 0 8px;
+}
+
+.proj h2{
+    font-size: 18px;
+    color: rgb(58, 58, 58);
+    margin: 4px;
+    margin-bottom: 10px;
+}
+
+
+.proj p{
+    font-size: 14px;
+    margin: 4px;
+    margin-bottom: 10px;
+
+}
+
+ul{
+    display: flex;
+    gap: 10px;
+}
+
+li{
+    margin-top: 10px;
+    flex: 1;
+    list-style: none;
+    gap: 10px;
+}
+
+a{
+    display: block;
+    text-align: center;
+    gap: 10px;
+    padding: 6px 35px;
+    text-decoration: none;
+    color: rgb(13, 13, 13);
+    background-color: #EFEFEF;
+    border: 0.5px solid rgb(53, 53, 53);
+    font-size: 12px;
+    border-radius: 2px;
+
+}
+
+label{
+    margin-bottom: 2px;
+}
+
+input{
+    width: 398px;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+}
+
+textarea{
+    width: 100%;
+    margin-bottom: 2px;
+}
+

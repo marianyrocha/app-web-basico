@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatos</title>
-</head>
+    <link rel="stylesheet" href="/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <body>
-    <h1>Entre em contato</h1>
-    <br>
-    <form action="/contato" method="post">
+    <section>
+        <form action="/contato" method="post">
         <div>
-             <label for="nome">Nome</label><br>
-            <input type="text" name="nome">
+            <h1 class="titulo">Contatos</h1>
         </div>
         <div>
-            <label for="email">Email</label><br>
+            <label for="email">Email:</label><br>
             <input type="text" name="email">
         </div>
         <div>
-            <label for="mensagem">Mensagem</label><br>
-            <textarea name="mensagem" cols="30" rows="10"></textarea>
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea name="mensagem" cols="30" rows="3"></textarea>
         </div>
-        <div>
+        <div class="bt">
             <button type="submit">Enviar</button>
             <button type="reset">Limpar Formulário</button>
         </div>
     </form>
+    </section>
 </body>
 </html>
