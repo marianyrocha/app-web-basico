@@ -1,8 +1,11 @@
 import express, { response } from "express";
 import path from "path";
+import nodemailer from "nodemailer";
+import dotenv from "dotenv";
 
+dotenv.config()
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
@@ -25,9 +28,26 @@ app.get('/projetos', (_, response) => {
     response.sendFile(path.join (__dirname, '../views/projetos.html'));
 });
 
-app.post('/contato', (request, response) => {
-    console.log(request.body);
+app.post('/contato', async (request, response) => {
     response.redirect('/');
+    
+const email = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+    } 
+});
+
+
+await email.sendMail({
+    from: request.body.email,
+    to: "testemariany3@gmail.com",
+    subject: "mensagem formulario",
+    text: request.body.mensagem
+})
+
+
 });
 
 app.listen(port, () => {
